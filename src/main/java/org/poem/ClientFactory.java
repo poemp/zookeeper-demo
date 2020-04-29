@@ -35,6 +35,15 @@ public class ClientFactory {
     }
 
     /**
+     *
+     * @return
+     */
+    public static CuratorFramework createSimple(){
+        return createSimple(connectionStr);
+    }
+
+
+    /**
      * @param connectionStr       连接地址
      * @param retryPolicy         重试策略
      * @param connectionTimeoutMs 连接超时时间
