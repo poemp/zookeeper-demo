@@ -1,7 +1,6 @@
 package org.poem.publishSubscribe;
 
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.*;
 import org.apache.curator.utils.CloseableUtils;
@@ -11,6 +10,11 @@ import org.poem.ClientFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ *只能监听数据
+ * 只能监听自身的变化
+ * 不能监听子节点的变化
+ */
 @Data
 public class ZkCacheWatcherDemo {
 

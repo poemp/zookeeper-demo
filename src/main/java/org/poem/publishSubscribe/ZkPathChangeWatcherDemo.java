@@ -2,7 +2,10 @@ package org.poem.publishSubscribe;
 
 import lombok.Data;
 import org.apache.curator.framework.CuratorFramework;
-import org.apache.curator.framework.recipes.cache.*;
+import org.apache.curator.framework.recipes.cache.ChildData;
+import org.apache.curator.framework.recipes.cache.PathChildrenCache;
+import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
+import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
 import org.apache.curator.utils.CloseableUtils;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.data.Stat;
@@ -10,6 +13,10 @@ import org.poem.ClientFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 只能监听子节点的变化
+ * 不能监听自身的变化
+ */
 @Data
 public class ZkPathChangeWatcherDemo {
 
@@ -41,13 +48,13 @@ public class ZkPathChangeWatcherDemo {
                 PathChildrenCacheEvent.Type type = event.getType();
                 switch (type) {
                     case CHILD_ADDED:
-                        logger.info("子节点增加,path={}, data = {}", data.getPath(), new String(data.getData()));
+                        logger.info("子节点增加,path={}, data = {}", data.getPath(), new String(data.getData() == null ? "".getBytes() :data.getData()));
                         break;
                     case CHILD_UPDATED:
-                        logger.info("子节点更新 path={}, data={}", data.getPath(), new String(data.getData()));
+                        logger.info("子节点更新 path={}, data={}", data.getPath(), new String(data.getData() == null ? "".getBytes() :data.getData()));
                         break;
                     case CHILD_REMOVED:
-                        logger.info("子节点删除 path={}, data={}", data.getPath(), new String(data.getData()));
+                        logger.info("子节点删除 path={}, data={}", data.getPath(),new String(data.getData() == null ? "".getBytes() :data.getData()));
                         break;
                     default:
                         break;
@@ -57,15 +64,16 @@ public class ZkPathChangeWatcherDemo {
             pathChildrenCache.start(PathChildrenCache.StartMode.BUILD_INITIAL_CACHE);
 
             for (int i = 0; i < 10; i++) {
-                client.create().withMode(CreateMode.PERSISTENT_SEQUENTIAL).forPath(subWorkerPath,subWorkerPath.getBytes());
+                client.create().withMode(CreateMode.PERSISTENT).forPath(subWorkerPath + i,subWorkerPath.getBytes());
             }
             Thread.sleep(1000);
+
             for (int i = 0; i < 10; i++) {
-                client.delete().forPath(subWorkerPath);
+                client.delete().forPath(subWorkerPath + i) ;
             }
 
 
-            Thread.sleep(Integer.MAX_VALUE);
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
