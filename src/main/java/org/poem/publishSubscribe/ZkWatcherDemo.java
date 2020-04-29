@@ -30,7 +30,7 @@ public class ZkWatcherDemo {
            if (stat == null){
                client.create()
                        .creatingParentContainersIfNeeded()
-                       .withMode(CreateMode.PERSISTENT)
+                       .withMode(CreateMode.PERSISTENT_SEQUENTIAL)
                        .forPath(workerPath);
            }
 
