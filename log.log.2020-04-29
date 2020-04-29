@@ -1,0 +1,605 @@
+2020-04-29 23:10:51  [ main-EventThread:0 ] - [ INFO ]  ZNode 节点状态改变，path=/test/cacheListener/remoteNode
+2020-04-29 23:10:51  [ main-EventThread:2 ] - [ INFO ]  ZNode 节点状态改变, data=第一次更改内容
+2020-04-29 23:10:51  [ main-EventThread:3 ] - [ INFO ]  ZNode 节点状态改变, stat=1136,1138,1588172993394,1588173051282,1,0,0,0,21,0,1136
+
+2020-04-29 23:10:52  [ main-EventThread:1036 ] - [ INFO ]  ZNode 节点状态改变，path=/test/cacheListener/remoteNode
+2020-04-29 23:10:52  [ main-EventThread:1036 ] - [ INFO ]  ZNode 节点状态改变, data=第二次更改内容
+2020-04-29 23:10:52  [ main-EventThread:1036 ] - [ INFO ]  ZNode 节点状态改变, stat=1136,1139,1588172993394,1588173052311,2,0,0,0,21,0,1136
+
+2020-04-29 23:10:53  [ main-EventThread:2078 ] - [ INFO ]  ZNode 节点状态改变，path=/test/cacheListener/remoteNode
+2020-04-29 23:10:53  [ main-EventThread:2079 ] - [ INFO ]  ZNode 节点状态改变, data=第三次更改内容
+2020-04-29 23:10:53  [ main-EventThread:2079 ] - [ INFO ]  ZNode 节点状态改变, stat=1136,1140,1588172993394,1588173053346,3,0,0,0,21,0,1136
+
+2020-04-29 23:10:54  [ main-EventThread:3110 ] - [ INFO ]  ZNode 节点状态改变，path=/test/cacheListener/remoteNode
+2020-04-29 23:10:54  [ main-EventThread:3110 ] - [ INFO ]  ZNode 节点状态改变, data=第四次更改内容
+2020-04-29 23:10:54  [ main-EventThread:3110 ] - [ INFO ]  ZNode 节点状态改变, stat=1136,1141,1588172993394,1588173054394,4,0,0,0,21,0,1136
+
+2020-04-29 23:10:55  [ main-EventThread:4169 ] - [ INFO ]  ZNode 节点状态改变，path=/test/cacheListener/remoteNode
+2020-04-29 23:10:55  [ main-EventThread:4169 ] - [ INFO ]  ZNode 节点状态改变, data=
+2020-04-29 23:10:55  [ main-EventThread:4170 ] - [ INFO ]  ZNode 节点状态改变, stat=1143,1143,1588173055456,1588173055456,0,0,0,0,0,0,1143
+
+2020-04-29 23:25:40  [ Curator-PathChildrenCache-0:0 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:25:41  [ Curator-PathChildrenCache-0:33 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:50)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:25:41  [ Curator-PathChildrenCache-0:34 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.refresh(PathChildrenCache.java:524)
+	at org.apache.curator.framework.recipes.cache.RefreshOperation.invoke(RefreshOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:11  [ Curator-PathChildrenCache-0:0 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:11  [ Curator-PathChildrenCache-0:159 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.refresh(PathChildrenCache.java:524)
+	at org.apache.curator.framework.recipes.cache.RefreshOperation.invoke(RefreshOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:0 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:17 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:38 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:58 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:80 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:100 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:122 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:142 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:163 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:48  [ Curator-PathChildrenCache-0:164 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:44)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:49  [ Curator-PathChildrenCache-0:1196 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at org.poem.publishSubscribe.ZkPathChangeWatcherDemo.lambda$testWatch$0(ZkPathChangeWatcherDemo.java:50)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:538)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:532)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:100)
+	at org.apache.curator.shaded.com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)
+	at org.apache.curator.framework.listen.ListenerContainer.forEach(ListenerContainer.java:92)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.callListeners(PathChildrenCache.java:530)
+	at org.apache.curator.framework.recipes.cache.EventOperation.invoke(EventOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:28:49  [ Curator-PathChildrenCache-0:1360 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache.refresh(PathChildrenCache.java:524)
+	at org.apache.curator.framework.recipes.cache.RefreshOperation.invoke(RefreshOperation.java:35)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$9.run(PathChildrenCache.java:808)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:0 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000012, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:17 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000013, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:37 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000014, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:59 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000015, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:78 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000016, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:80 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000017, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:119 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000018, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:141 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000019, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:162 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000020, data = 
+2020-04-29 23:30:36  [ Curator-PathChildrenCache-0:163 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000021, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:0 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-1, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:1 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:35 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-3, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:36 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-2, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:56 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-4, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:77 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-5, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:98 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-6, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:118 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-7, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:141 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-8, data = 
+2020-04-29 23:32:39  [ Curator-PathChildrenCache-0:142 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-9, data = 
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1174 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-0, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1194 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-1, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1216 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-2, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1235 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-3, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1257 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-4, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1277 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-5, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1299 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-6, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1319 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-7, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1340 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-8, data=
+2020-04-29 23:32:40  [ Curator-PathChildrenCache-0:1360 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-9, data=
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:1 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:14 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-1, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:36 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-2, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:56 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-3, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:77 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-4, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:97 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-5, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:119 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-6, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:139 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-7, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:160 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-8, data = 
+2020-04-29 23:33:08  [ Curator-PathChildrenCache-0:162 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-9, data = 
+2020-04-29 23:33:09  [ Curator-PathChildrenCache-0:1189 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-0, data=
+2020-04-29 23:33:09  [ Curator-PathChildrenCache-0:1210 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-1, data=
+2020-04-29 23:33:09  [ Curator-PathChildrenCache-0:1230 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-2, data=
+2020-04-29 23:33:09  [ Curator-PathChildrenCache-0:1252 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-3, data=
+2020-04-29 23:33:09  [ Curator-PathChildrenCache-0:1272 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-4, data=
+2020-04-29 23:33:10  [ Curator-PathChildrenCache-0:1294 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-5, data=
+2020-04-29 23:33:10  [ Curator-PathChildrenCache-0:1314 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-6, data=
+2020-04-29 23:33:10  [ Curator-PathChildrenCache-0:1335 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-7, data=
+2020-04-29 23:33:10  [ Curator-PathChildrenCache-0:1355 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-8, data=
+2020-04-29 23:33:10  [ Curator-PathChildrenCache-0:1377 ] - [ INFO ]  子节点删除 path=/test/cacheListener/remoteNode/id-9, data=
+2020-04-29 23:46:45  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode, data = 
+2020-04-29 23:46:45  [ Curator-TreeCache-0:2 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000002, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:3 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000003, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:3 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000004, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:6 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000005, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:6 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000006, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:6 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000007, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:7 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000008, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:7 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000009, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:7 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000010, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:8 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000011, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:8 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000012, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000013, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000014, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000015, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000016, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000017, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000018, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000019, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000020, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:11 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000021, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:46:45  [ Curator-TreeCache-0:11 ] - [ INFO ]  数据为空
+2020-04-29 23:46:46  [ Curator-TreeCache-0:1059 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-1, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode, data = 
+2020-04-29 23:49:12  [ Curator-TreeCache-0:3 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000002, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:3 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000003, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:3 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000004, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:3 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000005, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:4 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000006, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:5 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000007, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:5 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000008, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:6 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000009, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:7 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000010, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:7 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000011, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:8 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000012, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:8 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000013, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:8 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000014, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000015, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000016, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000017, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000018, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000019, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000020, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000021, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-1, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:49:12  [ Curator-TreeCache-0:10 ] - [ INFO ]  数据为空
+2020-04-29 23:50:25  [ Curator-PathChildrenCache-0:0 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0, data = 
+2020-04-29 23:51:21  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode, data = 
+2020-04-29 23:51:21  [ Curator-TreeCache-0:2 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:4 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000002, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:5 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000003, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:5 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000004, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:6 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000005, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:6 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000006, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:7 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000007, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:8 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000008, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000009, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:9 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000010, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:10 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000011, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:11 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000012, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:11 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000013, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:11 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000014, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:11 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000015, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:12 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000016, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:12 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000017, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:12 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000018, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:13 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000019, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:13 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000020, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:13 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-0000000021, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:13 ] - [ INFO ]  子节点增加,path=/test/cacheListener/remoteNode/id-1, data = /test/cacheListener/remoteNode/id-
+2020-04-29 23:51:21  [ Curator-TreeCache-0:14 ] - [ INFO ]  数据为空
+2020-04-29 23:52:07  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:52:07  [ Curator-TreeCache-0:1 ] - [ INFO ]  数据为空
+2020-04-29 23:52:08  [ Curator-TreeCache-0:1059 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode, data=192.168.22.1
+2020-04-29 23:52:08  [ main-EventThread:1060 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkExists(CuratorFrameworkImpl.java:459)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.wasDeleted(TreeCache.java:350)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.process(TreeCache.java:382)
+	at org.apache.curator.framework.imps.NamespaceWatcher.process(NamespaceWatcher.java:77)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:535)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:510)
+2020-04-29 23:52:41  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:52:41  [ Curator-TreeCache-0:1 ] - [ INFO ]  数据为空
+2020-04-29 23:52:42  [ Curator-TreeCache-0:1041 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-1, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:52:42  [ Curator-TreeCache-0:1079 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-1, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:52:42  [ main-EventThread:1080 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.doRefreshChildren(TreeCache.java:273)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.refreshChildren(TreeCache.java:259)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.process(TreeCache.java:376)
+	at org.apache.curator.framework.imps.NamespaceWatcher.process(NamespaceWatcher.java:77)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:535)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:510)
+2020-04-29 23:54:26  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:54:26  [ Curator-TreeCache-0:2 ] - [ INFO ]  数据为空
+2020-04-29 23:54:27  [ Curator-TreeCache-0:1047 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-1, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:54:28  [ Curator-TreeCache-0:2110 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-1, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:54:28  [ main-EventThread:2111 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.doRefreshChildren(TreeCache.java:273)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.refreshChildren(TreeCache.java:259)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.process(TreeCache.java:376)
+	at org.apache.curator.framework.imps.NamespaceWatcher.process(NamespaceWatcher.java:77)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:535)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:510)
+2020-04-29 23:55:15  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:55:15  [ Curator-TreeCache-0:2 ] - [ INFO ]  数据为空
+2020-04-29 23:55:16  [ Curator-TreeCache-0:1039 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-1, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:55:17  [ Curator-TreeCache-0:2122 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-1, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:55:17  [ main-EventThread:2123 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.doRefreshChildren(TreeCache.java:273)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.refreshChildren(TreeCache.java:259)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.process(TreeCache.java:376)
+	at org.apache.curator.framework.imps.NamespaceWatcher.process(NamespaceWatcher.java:77)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:535)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:510)
+2020-04-29 23:55:53  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:55:53  [ Curator-TreeCache-0:2 ] - [ INFO ]  数据为空
+2020-04-29 23:55:54  [ Curator-TreeCache-0:1046 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-1, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:56:02  [ Curator-TreeCache-0:9479 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-1, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:56:02  [ main-EventThread:9481 ] - [ ERROR ]  
+java.lang.IllegalStateException: Expected state [STARTED] was [STOPPED]
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:823)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkState(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getChildren(CuratorFrameworkImpl.java:480)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.doRefreshChildren(TreeCache.java:273)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.refreshChildren(TreeCache.java:259)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.process(TreeCache.java:376)
+	at org.apache.curator.framework.imps.NamespaceWatcher.process(NamespaceWatcher.java:77)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:535)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:510)
+2020-04-29 23:58:34  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:58:34  [ Curator-TreeCache-0:1 ] - [ INFO ]  数据为空
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1066 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-0, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1067 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-1, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1088 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-2, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1109 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-3, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1130 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-4, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1150 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-5, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1172 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-6, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1192 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-7, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1213 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-8, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:35  [ Curator-TreeCache-0:1233 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-9, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2261 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-0, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2281 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-1, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2303 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-2, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2323 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-3, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2345 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-4, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2365 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-5, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2386 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-6, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2406 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-7, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2428 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-8, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:36  [ Curator-TreeCache-0:2448 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-9, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:37  [ Curator-TreeCache-0:3489 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode, data=192.168.22.1
+2020-04-29 23:58:58  [ Curator-TreeCache-0:0 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode, data = 192.168.22.1
+2020-04-29 23:58:58  [ Curator-TreeCache-0:1 ] - [ INFO ]  数据为空
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1057 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-0, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1058 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-1, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1078 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-2, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1100 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-3, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1120 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-4, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1144 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-5, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1162 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-6, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1184 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-7, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1204 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-8, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:58:59  [ Curator-TreeCache-0:1225 ] - [ INFO ]  子节点增加,path=/test/treeCacheNode/remoteNode/id-9, data = /test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2249 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-0, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2268 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-1, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2290 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-2, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2310 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-3, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2331 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-4, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2351 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-5, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2373 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-6, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2393 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-7, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2415 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-8, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:00  [ Curator-TreeCache-0:2435 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode/id-9, data=/test/treeCacheNode/remoteNode/id-
+2020-04-29 23:59:01  [ Curator-TreeCache-0:3461 ] - [ INFO ]  子节点删除 path=/test/treeCacheNode/remoteNode, data=192.168.22.1

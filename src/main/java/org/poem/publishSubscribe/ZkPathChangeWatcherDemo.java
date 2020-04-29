@@ -37,7 +37,7 @@ public class ZkPathChangeWatcherDemo {
             if (stat == null) {
                 client.create()
                         .creatingParentContainersIfNeeded()
-                        .withMode(CreateMode.PERSISTENT)
+                        .withMode(CreateMode.EPHEMERAL)
                         .forPath(workerPath);
             }
 
@@ -64,7 +64,7 @@ public class ZkPathChangeWatcherDemo {
             pathChildrenCache.start(PathChildrenCache.StartMode.BUILD_INITIAL_CACHE);
 
             for (int i = 0; i < 10; i++) {
-                client.create().withMode(CreateMode.PERSISTENT).forPath(subWorkerPath + i,subWorkerPath.getBytes());
+                client.create().withMode(CreateMode.EPHEMERAL).forPath(subWorkerPath + i,subWorkerPath.getBytes());
             }
             Thread.sleep(1000);
 
